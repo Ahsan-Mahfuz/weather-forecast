@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(292deg, rgb(154 52 154) 0%, rgba(0, 255, 197, 1) 78%);
+  padding: 50px;
+  color: white;
+  min-height: 100vh;
+}
+
+main {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-width: 380px;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.input-with-search {
+  display: flex;
+  margin-bottom: 30px;
+  gap: 10px;
+
+}
+
+.input-with-search .country-name {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.input-with-search .search {
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position-x: 5px;
+  background-position-y: 5px;
+}
+
+.input-with-search .search:hover {
+  background-color: rgb(182, 87, 87);
+}
+
+
+.container .image {
+  display: block;
+  max-width: 150px;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container .degree-celsius {
+  font-size: 24px;
+  color: black;
+  margin-bottom: 5px;
+}
+
+.container .country-name {
+  font-size: 40px;
+  color: rgb(17, 7, 7);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.h-w-image {
+  max-width: 40px;
+  width: 100%;
+  min-height: 40px;
+}
+
+.container .humidity,
+.wind {
+  display: flex;
+  flex: 1;
+
+}
+
+.app-loading {
+  color: yellow;
+}
+
+.app-error {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.humidity-wind-speed {
+  display: flex;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+@media (width<=430px) {
+  .input-with-search {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .input-with-search .country-name {
+    max-width: 150px;
+  }
+
+  .humidity-wind-speed {
+    flex-direction: column;
+  }
+}
